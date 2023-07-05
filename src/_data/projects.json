@@ -2,14 +2,19 @@
     "username": "lucagrippa",
     "projects": [
         {
+          "repo_name": "lucagrippa.co",
+          "post": "",
+          "demo": ""
+        },
+        {
           "repo_name": "ana-lease",
-          "post": "/projects/",
-          "demo": "/projects/"
+          "post": "",
+          "demo": ""
         },
         {
           "repo_name": "sorting-visualizer",
           "post": "",
-          "demo": "/projects/"
+          "demo": ""
         },
         {
           "repo_name": "space-invaders",
