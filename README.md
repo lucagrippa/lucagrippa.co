@@ -1,2 +1,1 @@
-# Page header
 # lucagrippa.co
