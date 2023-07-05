@@ -1,0 +1,10 @@
+<div class="p-4 ring-1 rounded-lg ring-inset ring-zinc-300 dark:ring-zinc-700 bg-zinc-50 dark:bg-zinc-800">
+    <div class="">
+        <time class="font-mono font-thin text-zinc-500 text-sm">{{ post.data.date | date: "%B %d, %Y" }}</time>
+        <h3 class="text-lg font-bold ">
+            <a class="" href="{{ post.url }}">{{ post.data.title }}</a>
+        </h3>
+    </div>
+    <p class="py-2">{{ post.templateContent | excerpt }}</p>
+    <p class="pt-3 text-blue-500"><a href="{{ post.url }}">Read article ></a>
+</div>

@@ -1,0 +1,14 @@
+<footer class="mx-auto max-w-5xl px-2 sm:px-6 lg:px-8 ">
+  <div class="flex justify-between py-8 sm:py-12 border-t-2">
+    <div class="flex space-x-4">
+      {% for item in navigation.items %}
+        {% if item.url != page.url %}
+          <a href="{{ item.url }}" class="px-3 py-2 text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-200 dark:hover:text-zinc-50" aria-current="page">{{ item.text }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div>
+      <p class="px-3 py-2 text-sm font-medium text-zinc-600 dark:text-zinc-200">Made by Luca Grippa</p>
+    </div>
+  </div>
+</footer>

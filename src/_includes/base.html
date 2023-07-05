@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet">
+</head>
+
+<body class="text-zinc-800 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900">
+  {% include "navigation.html" %}
+
+  <main class="mx-auto my-20 max-w-4xl px-2 sm:px-6 lg:px-8">
+
+  {% block content %}{% endblock %}
+
+  </main>
+  
+  {% include "footer.html" %}
+</body>
+
+<script type="text/javascript" src="/dark_mode.js"></script>
+
+</html>

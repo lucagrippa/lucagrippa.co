@@ -1,0 +1,13 @@
+{% layout "./_includes/base.html" %}
+
+{% block content %}
+
+<h1 class="my-6 sm:my-10 text-4xl sm:text-5xl font-bold">Projects</h1>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+{% for project in github %}
+        {% include "./_includes/projects_card.html" %}
+{% endfor %}
+</div>
+
+{% endblock %}
+

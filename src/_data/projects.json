@@ -1,0 +1,25 @@
+{
+    "username": "lucagrippa",
+    "projects": [
+        {
+          "repo_name": "ana-lease",
+          "post": "/projects/",
+          "demo": "/projects/"
+        },
+        {
+          "repo_name": "sorting-visualizer",
+          "post": "",
+          "demo": "/projects/"
+        },
+        {
+          "repo_name": "space-invaders",
+          "post": "",
+          "demo": ""
+        },
+        {
+          "repo_name": "garden-design",
+          "post": "",
+          "demo": ""
+        }
+    ]
+}
