@@ -8,11 +8,9 @@ mobileMenuButton.addEventListener('click', () => {
 
   // Toggle the menu open/closed state
   mobileMenu.setAttribute('aria-expanded', !isMenuOpen);
-  mobileMenu.style.display = isMenuOpen ? 'none' : 'block';
+  mobileMenu.classList.toggle('hidden', isMenuOpen);
 
   // Toggle the visibility of the hamburger icons
-  mobileMenuOpenIcon.classList.toggle('block', !isMenuOpen);
   mobileMenuOpenIcon.classList.toggle('hidden', isMenuOpen);
   mobileMenuCloseIcon.classList.toggle('hidden', !isMenuOpen);
-  mobileMenuCloseIcon.classList.toggle('block', isMenuOpen);
 });
