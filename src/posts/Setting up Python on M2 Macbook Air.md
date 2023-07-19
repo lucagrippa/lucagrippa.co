@@ -4,13 +4,15 @@ date: '2022-09-06'
 tags: ['Apple', 'Python', 'Devtools', 'Development Setup']
 ---
 
+Notes on how I set up Python on my M2 Macbook Air. This is one of those posts that is more for my own records but here it is.
+
 ## Prerequisites:
 
 ### 1. Install Command Line Developer Tools
 
 - Open Terminal and type
 
-```
+```bash
 xcode-select --install
 ```
 
@@ -18,13 +20,13 @@ xcode-select --install
 ![XCode Popup](/images/xcode_select.png "XCode Popup")
 - After it installs type this command in the Terminal
 
-```
+```bash
 xcode-select -p
 ```
 
 - The response should be
 
-```
+```bash
 % /Library/Developer/CommandLineTools
 ```
 
@@ -34,14 +36,14 @@ xcode-select -p
 ### Step 1: Install Homebrew
 - https://brew.sh
 
-``` 
+``` bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 
 Run these two commands in your terminal to add Homebrew to your **PATH** (Homebrew gives these commands to you after installation):
 
-```
+```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/lukegrippa/.zprofile
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -50,14 +52,14 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 Check if Homebrew is installed correctly
 
-```
+```bash
 brew doctor
 ```
 
 
 Terminal should respond
 
-```
+```bash
 % Your system is ready to brew.
 ```
 
@@ -66,14 +68,14 @@ Terminal should respond
 
 ### Step 2: Install Pyenv
 
-```
+```bash
 brew install pyenv
 ```
 
 
 To update in the future use
 
-```
+```bash
 brew update
 brew upgrade pyenv
 ```
@@ -83,21 +85,21 @@ Add three lines to your configuration file
 
 1. This  line sets an environment variable (`PYENV_ROOT`) that points to the pyenv directory.
 
-```
+```bash
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
 ```
 
 
 2. This line puts pyenv first in your search path so that the OS will find pyenv’s Python(s) before any other Pythons.
 
-```
+```bash
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
 ```
 
 
 3. This line initializes pyenv each time you open a terminal.
 
-```
+```bash
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.zprofile
 ```
 
@@ -110,14 +112,14 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi
 
 Before installing python I want to install a couple of packages
 
-```
+```bash
 brew install openssl readline sqlite3 xz zlib
 ```
 
 
 Check which version are available
 
-```
+```bash
 pyenv install -l
 
 pyenv install --list
@@ -126,35 +128,35 @@ pyenv install --list
 
 Install latest version
 
-```
+```bash
 pyenv install 3.10.5
 ```
 
 
 Rehash Python binaries
 
-```
+```bash
 pyenv rehash
 ```
 
 
 Check which versions you have downloaded
 
-```
+```bash
 pyenv versions
 ```
 
 
 Set Global version of Python
 
-```
+```bash
 pyenv global 3.10.5
 ```
 
 
 Uninstall a version of Python
 
-```
+```bash
 pyenv uninstall 3.10.5
 ```
 

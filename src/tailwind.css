@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('code-blocks.css');
+
+@layer utilities {
+    .named-fence-block {
+        @apply relative py-8; /* Equivalent to position: relative; padding-top: 2em; */
+    }
+    
+    .named-fence-filename {
+        @apply absolute top-0 left-0 px-2 font-bold text-sm text-black bg-gray-400 opacity-60; /* Equivalent to the rest of the styles */
+    }
+}      
