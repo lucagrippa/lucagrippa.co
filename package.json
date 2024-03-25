@@ -1,27 +1,49 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "next-template",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "eleventy --serve & npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --watch",
-    "build": "eleventy & tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@tailwindcss/typography": "^0.5.9",
-    "markdown-it": "^13.0.1",
-    "markdown-it-prism": "^2.3.0",
-    "node-fetch": "^2.6.7",
-    "tailwindcss": "^3.3.2"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@11ty/eleventy-fetch": "^4.0.0",
-    "@vercel/analytics": "^1.0.1",
-    "markdown-it-named-code-blocks": "^0.2.0"
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.5.6",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toggle": "^1.0.3",
+    "@types/mdx": "^2.0.11",
+    "@vercel/speed-insights": "^1.0.10",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.285.0",
+    "next": "13.5.4",
+    "next-mdx-remote": "^4.4.1",
+    "next-themes": "^0.2.1",
+    "octokit": "^3.1.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "rehype-pretty-code": "^0.13.0",
+    "shadcn-ui": "^0.8.0",
+    "shiki": "^1.1.7",
+    "swr": "^2.2.4",
+    "tailwind-highlightjs": "^2.0.1",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "postcss": "^8",
+    "tailwindcss": "^3"
   }
 }
