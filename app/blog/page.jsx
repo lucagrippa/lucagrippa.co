@@ -9,7 +9,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 export default async function BlogPosts() {
     // const posts = getSortedPostsData();
     const posts = await getPosts();
-    console.log(posts);
+    // console.log(posts);
 
     return (
         <>
