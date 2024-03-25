@@ -19,7 +19,7 @@ export default async function Home() {
     <>
       <section>
         <h1 className="my-6 sm:my-8 text-3xl sm:text-4xl font-bold">Software Engineer and Researcher</h1>
-        <p className="my-3 sm:my-4 text-base">Hi I'm Luca, a software engineer and researcher based in New York City, specializing in cybersecurity research and leveraging large language models to drive innovation. </p>
+        <p className="my-3 sm:my-4 text-base">Hi I&apos;m Luca, a software engineer and researcher based in New York City, specializing in cybersecurity research and leveraging large language models to drive innovation. </p>
         <div className="flex space-x-4">
             <Link href={process.env.NEXT_PUBLIC_GITHUB}>
               <Github className="" size={22} strokeWidth={1} />
