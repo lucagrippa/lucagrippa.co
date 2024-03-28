@@ -5,34 +5,34 @@ import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { Logo } from '@/components/logo'
 import { SpeedInsights } from "@vercel/speed-insights/next"
-
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
 
 const routes = [
   {
-      title: "Home",
-      href: "/",
-      //   description:
-      //     "A modal dialog that interrupts the user with important content and expects a response.",
+    title: "Home",
+    href: "/",
+    //   description:
+    //     "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
-      title: "Blog",
-      href: "/blog",
-      //   description:
-      //     "For sighted users to preview content available behind a link.",
+    title: "Blog",
+    href: "/blog",
+    //   description:
+    //     "For sighted users to preview content available behind a link.",
   },
   {
-      title: "Projects",
-      href: "/projects",
-      //   description:
-      //     "For sighted users to preview content available behind a link.",
+    title: "Projects",
+    href: "/projects",
+    //   description:
+    //     "For sighted users to preview content available behind a link.",
   },
   {
-      title: "GitHub",
-      href: process.env.NEXT_PUBLIC_GITHUB,
-      //   description:
-      //     "For sighted users to preview content available behind a link.",
+    title: "GitHub",
+    href: process.env.NEXT_PUBLIC_GITHUB,
+    //   description:
+    //     "For sighted users to preview content available behind a link.",
   },
 ]
 
@@ -44,7 +44,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <SpeedInsights/>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -57,6 +56,8 @@ export default function RootLayout({ children }) {
             <Navigation routes={routes} />
             <main className="flex flex-col mx-auto max-w-4xl px-2 sm:px-6 lg:px-8 py-10">
               {children}
+              <Analytics />
+              <SpeedInsights />
             </main>
             <Footer routes={routes} />
           </div>
